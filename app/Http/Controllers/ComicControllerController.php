@@ -47,9 +47,10 @@ class ComicControllerController extends Controller
      * @param  \App\ComicController  $comicController
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($slug)
     {
-        return view('show');
+        $comic = Comic::where('slug', $slug)->first();
+        return view('show', compact('comic'));
     }
 
     /**
