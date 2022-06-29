@@ -2,4 +2,5 @@
 
 @section('content')
 <h1>PROVA 2</h1>
+@dd($comics);
 @endsection
