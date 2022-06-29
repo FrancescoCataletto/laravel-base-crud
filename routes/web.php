@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'ComicControllerController@index');
+
+Route::get('show', 'ComicControllerController@show');

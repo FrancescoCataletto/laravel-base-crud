@@ -47,9 +47,9 @@ class ComicControllerController extends Controller
      * @param  \App\ComicController  $comicController
      * @return \Illuminate\Http\Response
      */
-    public function show(ComicController $comicController)
+    public function show()
     {
-        //
+        return view('show');
     }
 
     /**
