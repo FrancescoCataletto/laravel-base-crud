@@ -20,7 +20,11 @@
             <td>
                 <a href="{{route('comic.show', $comic->slug)}}">SHOW</a>
                 <a href="{{route('comic.edit', $comic->slug)}}">EDIT</a>
-                <a href="#">DELETE</a>
+                <form action="{{route('comic.destroy', $comic)}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" value="DELETE">
+                </form>
             </td>
         </tr>
         @endforeach
