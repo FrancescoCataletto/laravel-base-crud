@@ -19,5 +19,6 @@ Route::get('/', function () {
 
 Route::get('index', 'ComicControllerController@index');
 Route::get('create', 'ComicControllerController@create');
-
+Route::get('edit', 'ComicControllerController@edit');
+Route::get('update', 'ComicControllerController@update');
 Route::resource('comic', 'ComicControllerController');

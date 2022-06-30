@@ -19,7 +19,7 @@
             <td>{{$comic->title}}</td>
             <td>
                 <a href="{{route('comic.show', $comic->slug)}}">SHOW</a>
-                <a href="#">EDIT</a>
+                <a href="{{route('comic.edit', $comic->slug)}}">EDIT</a>
                 <a href="#">DELETE</a>
             </td>
         </tr>

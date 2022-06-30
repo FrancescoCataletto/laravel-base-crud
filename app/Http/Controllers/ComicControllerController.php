@@ -71,9 +71,10 @@ class ComicControllerController extends Controller
      * @param  \App\ComicController  $comicController
      * @return \Illuminate\Http\Response
      */
-    public function edit(ComicController $comicController)
+    public function edit($slug)
     {
-        //
+        $comic = Comic::where('slug', $slug)->first();
+        return view('edit', compact('comic'));
     }
 
     /**
@@ -83,9 +84,15 @@ class ComicControllerController extends Controller
      * @param  \App\ComicController  $comicController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ComicController $comicController)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $data = $request->all();
+        // dump($data);
+        // dump($comic);
+        $comic->slug = Str::slug($comic->title, '-');
+        $comic->update($data);
+
+        return redirect()->route('comic.show', $comic->slug);
     }
 
     /**
