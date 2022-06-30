@@ -1,0 +1,13 @@
+header ul {
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+header ul li a {
+  text-decoration: none;
+}
+
