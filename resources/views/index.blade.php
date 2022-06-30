@@ -18,7 +18,7 @@
             <td>{{$comic->id}}</td>
             <td>{{$comic->title}}</td>
             <td>
-                <a href="#">SHOW</a>
+                <a href="{{route('comic.show', $comic->slug)}}">SHOW</a>
                 <a href="#">EDIT</a>
                 <a href="#">DELETE</a>
             </td>
