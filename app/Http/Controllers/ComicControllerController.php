@@ -62,7 +62,10 @@ class ComicControllerController extends Controller
     public function show($slug)
     {
         $comic = Comic::where('slug', $slug)->first();
-        return view('show', compact('comic'));
+        if($comic){
+            return view('show', compact('comic'));
+        }
+        abort(404, 'Fumetto non trovato');
     }
 
     /**
