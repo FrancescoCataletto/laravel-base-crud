@@ -6,6 +6,19 @@
     <div class="row">
         <div class="col-8 offset-2">
             <h2 class="mb-3">Modifica il fumetto</h2>
+            
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>
+                                {{$error}}
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <form action="{{route('comic.update', $comic)}}" method="POST">
                 @csrf
 
