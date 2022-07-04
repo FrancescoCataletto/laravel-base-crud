@@ -20,7 +20,7 @@
             <td>
                 <a href="{{route('comic.show', $comic->slug)}}">SHOW</a>
                 <a href="{{route('comic.edit', $comic->slug)}}">EDIT</a>
-                <form action="{{route('comic.destroy', $comic)}}" method="POST">
+                <form action="{{route('comic.destroy', $comic)}}" method="POST" onsubmit="return confirm('Are you sure you want to delete this comic?')">
                     @csrf
                     @method('DELETE')
                     <input type="submit" value="DELETE">
