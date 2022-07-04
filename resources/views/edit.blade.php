@@ -26,17 +26,29 @@
                 <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
                     <input type="text" id="title" name="title" value="{{$comic->title}}"
-                    class="form-control" placeholder="Titolo">
+                    class="form-control @error('title') is-invalid
+                    @enderror" placeholder="Titolo">
+                    @error('title')
+                        <p class="alert alert-danger">{{$message}}</p>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="type" class="form-label">Type</label>
                     <input type="text" id="type" name="type" value="{{$comic->type}}"
-                    class="form-control" placeholder="Tipo" >
+                    class="form-control @error('type') is-invalid
+                    @enderror" placeholder="Tipo" >
+                    @error('type')
+                        <p class="alert alert-danger">{{$message}}</p>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="image" class="form-label">Image URL</label>
                     <input type="text" id="image" name="image" value="{{$comic->image}}"
-                    class="form-control" placeholder="URL immagine" >
+                    class="form-control @error('image') is-invalid
+                    @enderror" placeholder="URL immagine" >
+                    @error('image')
+                        <p class="alert alert-danger">{{$message}}</p>
+                    @enderror
                 </div>
 
                 <button type="submit" class="btn btn-primary">Invia</button>
