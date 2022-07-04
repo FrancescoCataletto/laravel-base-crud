@@ -24,7 +24,9 @@
                     <label for="title" class="form-label"></label>
                     <input type="text" id="title" name="title" 
                            class="form-control @error('title')  is-invalid
-                            @enderror" placeholder="Titolo">
+                            @enderror" 
+                            value="{{old('title')}}"
+                            placeholder="Titolo">
                     @error('title')
                         <p class="alert alert-danger">{{$message}}</p>
                     @enderror        
@@ -33,7 +35,9 @@
                     <label for="type" class="form-label"></label>
                     <input type="text" id="type" name="type" 
                            class="form-control @error('type') is-invalid
-                           @enderror" placeholder="Tipo" >
+                           @enderror" 
+                           value="{{old('type')}}"
+                           placeholder="Tipo" >
                         @error('type')
                             <p class="alert alert-danger">{{$message}}</p>
                         @enderror
@@ -42,7 +46,9 @@
                     <label for="image" class="form-label"></label>
                     <input type="text" id="image" name="image" 
                            class="form-control @error('image') is-invalid
-                           @enderror" placeholder="URL immagine" >
+                           @enderror" 
+                           value="{{old('image')}}"
+                           placeholder="URL immagine" >
                         @error('image')
                             <p class="alert alert-danger">{{$message}}</p>
                         @enderror
