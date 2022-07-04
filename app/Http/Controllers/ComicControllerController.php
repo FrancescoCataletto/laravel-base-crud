@@ -43,6 +43,16 @@ class ComicControllerController extends Controller
             'title' => 'required|max:255|string',
             'image' => 'required|image',
             'type' => 'required|string|max:255'
+        ],
+        [
+            'title.required' => 'Bisogna inserire un titolo',
+            'title.max' => 'Il titolo deve essere lungo al massimo 255 caratteri',
+            'title.string' => 'Il titolo deve essere una stringa',
+            'image.required' => 'Bisogna inserire un\'immagine',
+            'image.image' => 'Inserire un\'immagine valida',
+            'type.required' => 'Bisogna inserire una tipologia di fumetto',
+            'type.string' => 'La tipologia di fumetto deve essere una stringa',
+            'type.max' => 'La tipologia deve essere lunga al massimo 255 caratteri'
         ]);
 
 
@@ -103,6 +113,16 @@ class ComicControllerController extends Controller
             'title' => 'required|max:255|string',
             'image' => 'required|image',
             'type' => 'required|string|max:255'
+        ],
+        [
+            'title.required' => 'Bisogna inserire un titolo',
+            'title.max' => 'Il titolo deve essere lungo al massimo 255 caratteri',
+            'title.string' => 'Il titolo deve essere una stringa',
+            'image.required' => 'Bisogna inserire un\'immagine',
+            'image.image' => 'Inserire un\'immagine valida',
+            'type.required' => 'Bisogna inserire una tipologia di fumetto',
+            'type.string' => 'La tipologia di fumetto deve essere una stringa',
+            'type.max' => 'La tipologia deve essere lunga al massimo 255 caratteri'
         ]);
 
 
